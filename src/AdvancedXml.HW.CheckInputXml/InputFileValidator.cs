@@ -13,11 +13,11 @@ namespace AdvancedXml.HW.CheckInputXml
 
         private IList<string> _fileErrors = new List<string>();
 
-        public InputFileValidator(string xsdSchema)
+        public InputFileValidator(string xsdSchema, string targetNamespace = "http://library.by/catalog")
         {
             var settings = new XmlReaderSettings();
 
-            settings.Schemas.Add("http://library.by/catalog", xsdSchema);
+            settings.Schemas.Add(targetNamespace, xsdSchema);
             settings.ValidationEventHandler +=
                 delegate (object sender, ValidationEventArgs e)
                 {
