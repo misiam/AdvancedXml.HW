@@ -35,7 +35,7 @@ namespace AdvancedXml.HW.AtomFeedConsole
             var xsl = new XslCompiledTransform();
             xsl.Load(_xsltFile, xslSettings, null);
 
-            using (var stream = new FileStream(outputFile, FileMode.Truncate, FileAccess.Write))
+            using (var stream = new FileStream(outputFile, FileMode.Create, FileAccess.Write))
             {
                 xsl.Transform(inputFile, null, Console.Out);
                 xsl.Transform(inputFile, null, stream);
