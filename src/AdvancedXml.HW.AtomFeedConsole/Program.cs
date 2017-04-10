@@ -20,7 +20,7 @@ namespace AdvancedXml.HW.AtomFeedConsole
             }
             if (args.Length > 0)
             {
-                outputFile = args[0];
+                inputFile = args[0];
 
             }
             
