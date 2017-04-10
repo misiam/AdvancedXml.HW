@@ -13,7 +13,7 @@ namespace AdvancedXml.HW.AtomFeedConsole
         private readonly string _xsltFile;
 
 
-        public FeedBuilder(string inputFileXsd = @".\Schemas\XMLSchemaBooks.xsd", string xsltFile = @".TransformToAtom.xslt")
+        public FeedBuilder(string inputFileXsd = @".\Schemas\XMLSchemaBooks.xsd", string xsltFile = @".\TransformToAtom.xslt")
         {
             _inputFileXsd = inputFileXsd;
             _xsltFile = xsltFile;
@@ -33,7 +33,7 @@ namespace AdvancedXml.HW.AtomFeedConsole
             XsltSettings xslSettings = new XsltSettings {EnableScript = true};
 
             var xsl = new XslCompiledTransform();
-            xsl.Load("TransformToAtom.xslt", xslSettings, null);
+            xsl.Load(_xsltFile, xslSettings, null);
 
             using (var stream = new FileStream(outputFile, FileMode.Truncate, FileAccess.Write))
             {
