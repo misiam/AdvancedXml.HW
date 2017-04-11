@@ -47,29 +47,9 @@
     </content>
   
   </entry>
-  <!--<entry>
-    <title><xsl:value-of select="title"/></title>
-    <xsl:if test="isbn"><link href="http://my.safaribooksonline.com/{isbn}/" /></xsl:if>
-    <id><xsl:copy-of select="@id"/></id>
-    <xsl:copy-of select="registration_date"/>
-    <content type="text/xml">
-      <xsl:copy-of select="author"/>
-      <xsl:copy-of select="genre"/>
-      <xsl:copy-of select="publisher"/>
-      <xsl:copy-of select="publish_date"/>
-      <xsl:copy-of select="description"/>
-    </content>
-  </entry>-->
-    
+   
 
 </xsl:template>
- 
-  <!--<xsl:template match="*" mode="copy-no-namespaces">
-    <xsl:element name="{local-name()}">
-        <xsl:copy-of select="@*"/>
-        <xsl:apply-templates select="node()" mode="copy-no-namespaces"/>
-    </xsl:element>
-  
-</xsl:template>-->
+
 
 </xsl:stylesheet>
